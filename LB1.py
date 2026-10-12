@@ -35,24 +35,13 @@ def draw_uzor():
 
 
 def animation():
-    print(['M','M','.','.'])
-    print(['.','M','.','.'])
-    print(['.','M','.','.'])
-    time.sleep(2)
-    os.system("clear")
-    print(f'{HOME}')
-    print(['.','M','.','.'])
-    print(['.','M','.','.'])
-    print(['.','M','M','.'])
-    time.sleep(2)
-    os.system("clear")
-    print(f'{HOME}')
-    print(['.','.','.','.'])
-    print(['.','M','.','.'])
-    print(['.','M','M','M'])
-    time.sleep(2)
-    os.system("clear")
-    print(f'{HOME}')
+    bar_width = 4
+    for proc in range(1, bar_width+1):
+        bar = '#' * 25 *proc + '-' * 25 * (bar_width - proc)
+        print(f'[{bar}] {proc*25}%')
+        time.sleep(2)
+        os.system("clean")
+        print(f'{HOME}')
 
 
 def file_process():
